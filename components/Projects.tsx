@@ -4,13 +4,31 @@ export default function Projects() {
       title: "Tariqi Navigation – Checkpoint Status System",
       description: "Graduation project featuring real-time checkpoint updates using Telethon and FastAPI with LLM-based entity recognition. Delivered a comprehensive cross-platform solution including a Flutter mobile app with Firebase live updates and an Angular admin panel.",
       technologies: ["Python", "FastAPI", "Telethon", "LLM", "Flutter", "Firebase", "Angular"],
-      link: "#"
+      link: "https://github.com/yousef-isaifan/Tariqi-Navigation"
     },
     {
       title: "Intelligent Chatbot Project",
       description: "Built an interactive chatbot in Python using NLP for natural conversations. Implemented preprocessing, intent recognition, and response generation pipelines. Improved accuracy with transformer models using TensorFlow/Keras and NLP libraries.",
       technologies: ["Python", "NLP", "TensorFlow", "Keras", "Transformers"],
-      link: "#"
+      link: "https://github.com/yousef-isaifan/Chatbot"
+    },
+    {
+      title: "Parking Lots Management System",
+      description: "Comprehensive parking lots management system designed to efficiently manage parking spaces for employees and drivers. Features include space allocation, tracking, and administration.",
+      technologies: ["Management System"],
+      link: "https://github.com/yousef-isaifan/ParkingLot"
+    },
+    {
+      title: "Hotel Hub",
+      description: "Android application for hotel reservation system. Provides a seamless booking experience with intuitive interface for users to browse, book, and manage hotel reservations.",
+      technologies: ["Android", "Java/Kotlin"],
+      link: "https://github.com/yousef-isaifan/Hotel_Hub"
+    },
+    {
+      title: "Tic Tac Toe Game",
+      description: "Intelligent Tic Tac Toe game implementation using MiniMax Backtracking Algorithm. Features an unbeatable AI opponent that makes optimal moves using game theory principles.",
+      technologies: ["Algorithm", "MiniMax", "AI"],
+      link: "https://github.com/yousef-isaifan/TicTacToe"
     }
   ];
 
