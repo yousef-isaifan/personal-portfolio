@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Bio from "@/components/Bio";
 import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <main className="w-full">
         <Bio />
         <Skills />
+        <Projects />
         <Contact />
       </main>
     </div>
