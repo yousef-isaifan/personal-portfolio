@@ -27,12 +27,14 @@ export default function Education() {
     {
       title: "Arabic NLP",
       provider: "Udemy",
-      description: "Focused on text preprocessing, classifiers, chatbots, translation (LSTM), and transformers for Arabic."
+      description: "Focused on text preprocessing, classifiers, chatbots, translation (LSTM), and transformers for Arabic.",
+      link: "https://www.udemy.com/certificate/UC-7724b5cc-225e-4204-95d2-b7fb0f3ae93c/"
     },
     {
       title: "Front End Web Developer Nanodegree",
       provider: "Udacity",
-      description: "Covered DOM manipulation, async JS, performance optimization, testing, and automation with Parcel."
+      description: "Covered DOM manipulation, async JS, performance optimization, testing, and automation with Parcel.",
+      link: "https://www.udacity.com/certificate/e/032cf00a-edf1-11ef-8f77-477783e28c9a"
     }
   ];
 
@@ -54,7 +56,7 @@ export default function Education() {
                 className="group relative animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Left side - Year badge */}
+                {/* Year Text */}
                 <div className="flex items-start gap-6">
                   <div className="hidden md:flex flex-col items-center w-[160px] flex-shrink-0">
                     <div className="w-full h-[60px] flex items-center justify-center px-3 py-2 border-2 border-blue-600 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-blue-500 text-blue-600 group-hover:text-white rounded-full text-xs font-bold shadow-md group-hover:shadow-lg text-center leading-tight transition-all duration-300">
@@ -65,7 +67,7 @@ export default function Education() {
                     )}
                   </div>
                   
-                  {/* Right side - Card content */}
+                  {/* Education Details */}
                   <div className="flex-1 bg-gradient-to-br from-slate-50 to-blue-50 border-l-4 border-blue-600 rounded-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {edu.degree}
@@ -121,6 +123,15 @@ export default function Education() {
                   </div>
                 </div>
                 <p className="text-gray-700 text-sm leading-relaxed">{cert.description}</p>
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  // Enhanced styling for the link
+                  className="inline-block mt-4 text-blue-600 hover:underline"
+                >
+                  View Certificate
+                </a>
               </div>
             ))}
           </div>
