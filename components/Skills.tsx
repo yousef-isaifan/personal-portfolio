@@ -77,9 +77,9 @@ export default function Skills() {
     <section className="w-full py-16 px-6 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-3 inline-block relative">
+          <h2 className="group text-4xl font-bold text-gray-800 mb-3 inline-block relative cursor-default">
             Skills & Technologies
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-50 transition-transform duration-300 hover:scale-x-100"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-50 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
           </h2>
           <p className="text-gray-600 mt-4">Technologies I work with</p>
         </div>

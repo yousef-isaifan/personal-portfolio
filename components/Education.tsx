@@ -38,42 +38,53 @@ export default function Education() {
 
   return (
     <section className="w-full py-16 px-6 bg-white">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Education */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-3 inline-block relative">
+            <h2 className="group text-4xl font-bold text-gray-900 mb-3 inline-block relative cursor-default">
               Education
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-50 transition-transform duration-300 hover:scale-x-100"></span>
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-50 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
             </h2>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-8">
             {education.map((edu, index) => (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up"
+                className="group relative animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                {/* Left side - Year badge */}
+                <div className="flex items-start gap-6">
+                  <div className="hidden md:flex flex-col items-center w-[160px] flex-shrink-0">
+                    <div className="w-full h-[60px] flex items-center justify-center px-3 py-2 border-2 border-blue-600 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-blue-500 text-blue-600 group-hover:text-white rounded-full text-xs font-bold shadow-md group-hover:shadow-lg text-center leading-tight transition-all duration-300">
+                      {edu.period}
+                    </div>
+                    {index !== education.length - 1 && (
+                      <div className="w-0.5 h-16 bg-gradient-to-b from-blue-500 to-blue-200 mt-4"></div>
+                    )}
+                  </div>
+                  
+                  {/* Right side - Card content */}
+                  <div className="flex-1 bg-gradient-to-br from-slate-50 to-blue-50 border-l-4 border-blue-600 rounded-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {edu.degree}
                       {edu.current && (
-                        <span className="ml-3 text-sm font-semibold px-3 py-1 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full">
+                        <span className="ml-2 text-xs font-semibold px-2 py-1 bg-green-500 text-white rounded-full">
                           Current
                         </span>
                       )}
                     </h3>
-                    <p className="text-lg font-semibold text-gray-700 mb-1">
+                    <p className="text-base font-semibold text-blue-600 mb-2">
                       {edu.institution}
                     </p>
-                    <p className="text-gray-600">{edu.location}</p>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <span className="font-medium">{edu.period}</span>
+                    <p className="text-gray-600 text-sm mb-2">{edu.location}</p>
+                    <div className="flex items-center gap-2 text-gray-500 text-xs md:hidden">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      <span className="font-medium">{edu.period}</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -84,35 +95,32 @@ export default function Education() {
         {/* Certifications */}
         <div>
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-3 inline-block relative">
+            <h2 className="group text-4xl font-bold text-gray-900 mb-3 inline-block relative cursor-default">
               Certifications
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-50 transition-transform duration-300 hover:scale-x-100"></span>
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-50 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-100 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up"
-                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+                className="bg-gradient-to-br from-slate-50 to-blue-50 border border-blue-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-400 opacity-10 rounded-bl-full"></div>
-                <div className="relative">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="p-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
-                        {cert.title}
-                      </h3>
-                      <p className="text-sm font-semibold text-purple-600">{cert.provider}</p>
-                    </div>
+                <div className="flex items-start gap-4 mb-3">
+                  <div className="p-2 bg-blue-600 rounded-lg shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
                   </div>
-                  <p className="text-gray-700 leading-relaxed">{cert.description}</p>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">
+                      {cert.title}
+                    </h3>
+                    <p className="text-sm font-semibold text-blue-600">{cert.provider}</p>
+                  </div>
                 </div>
+                <p className="text-gray-700 text-sm leading-relaxed">{cert.description}</p>
               </div>
             ))}
           </div>
