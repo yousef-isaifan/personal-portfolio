@@ -39,14 +39,14 @@ export default function Projects() {
 
   return (
     <section id="projects" className="w-full py-20 px-6 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
-      {/* Background decoration */}
+      {/* Background */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-20"></div>
       
       <div className="max-w-5xl mx-auto relative">
         <div className="text-center mb-16">
           <h2 className="group text-5xl font-bold text-gray-800 mb-6 inline-block relative cursor-default">
             Projects
-            <span className="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-50 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-50 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
           </h2>
           <p className="text-gray-600 mt-2 text-lg">Check out some of my recent work</p>
         </div>
@@ -55,9 +55,7 @@ export default function Projects() {
             <div
               key={index}
               className="group relative bg-white border-2 border-gray-200 rounded-3xl p-8 md:p-10 hover:shadow-3xl hover:border-transparent transition-all duration-500 transform hover:-translate-y-3 overflow-hidden animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Animated gradient border on hover */}
+              style={{ animationDelay: `${index * 0.1}s` }}>
               <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-3xl`}></div>
               <div className={`absolute -inset-1 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-500`}></div>
               
@@ -66,7 +64,6 @@ export default function Projects() {
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300 flex-1">
                     {project.title}
                   </h3>
-                  <div className={`hidden md:block w-12 h-12 rounded-full bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-100 transition-all duration-300 group-hover:rotate-180 group-hover:scale-110`}></div>
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">{project.description}</p>
                 <div className="flex flex-wrap gap-3 mb-6">

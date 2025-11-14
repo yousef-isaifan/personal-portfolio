@@ -127,9 +127,7 @@ export default function Education() {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  // Enhanced styling for the link
-                  className="inline-block mt-4 text-blue-600 hover:underline"
-                >
+                  className="inline-block mt-4 text-blue-600 hover:underline">
                   View Certificate
                 </a>
               </div>

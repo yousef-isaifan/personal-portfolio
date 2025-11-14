@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="relative w-full min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white px-6 overflow-hidden">
-      {/* Modern mesh gradient background */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 -left-4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
         <div className="absolute top-0 -right-4 w-96 h-96 bg-blue-700 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
@@ -41,7 +40,7 @@ export default function Header() {
 
             <div className="flex flex-wrap gap-4">
               <a 
-                href="#projects" 
+                href="#bio" 
                 className="group relative px-8 py-4 bg-blue-600 hover:bg-blue-500 rounded-xl font-semibold transition-all overflow-hidden"
               >
                 <span className="relative z-10">View My Work</span>
@@ -73,13 +72,9 @@ export default function Header() {
           {/* Right side - Profile Image */}
           <div className="relative flex justify-center md:justify-end animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="relative mt-12 md:mt-16">
-              {/* Glowing backdrop */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl blur-2xl opacity-30"></div>
               
-              {/* Image container */}
               <div className="relative">
-                
-                {/* Main image */}
                 <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent z-10"></div>
                   <Image
