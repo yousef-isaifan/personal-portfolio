@@ -43,8 +43,8 @@ export default function Projects() {
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-20"></div>
       
       <div className="max-w-5xl mx-auto relative">
-        <div className="text-center mb-16">
-          <h2 className="group text-5xl font-bold text-gray-800 mb-6 inline-block relative cursor-default">
+        <div className="text-center mb-12">
+          <h2 className="group text-4xl font-bold text-gray-900 mb-3 inline-block relative cursor-default">
             Projects
             <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-50 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
           </h2>

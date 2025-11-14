@@ -97,10 +97,8 @@ export default function Skills() {
           </button>
 
           <div className="relative flex-1 min-w-0">
-            {/* Left gradient overlay */}
             <div className="absolute left-0 top-0 bottom-4 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
             
-            {/* Right gradient overlay */}
             <div className="absolute right-0 top-0 bottom-4 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
             {/* Scroll container */}
@@ -111,7 +109,7 @@ export default function Skills() {
             onMouseLeave={() => setIsAutoScrolling(true)}
           >
             <div className="flex gap-6 px-4 py-4">
-              {/* Duplicate skills for seamless loop */}
+              {/* Duplicate skills to loop */}
               {[...skills, ...skills].map((skill, index) => (
                 <div
                   key={`${skill.name}-${index}`}
@@ -131,10 +129,6 @@ export default function Skills() {
                   <span className="relative text-gray-800 font-bold text-center px-2 text-sm group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
                     {skill.name}
                   </span>
-                  {/* Shimmer effect on hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  </div>
                 </div>
               ))}
             </div>
